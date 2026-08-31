@@ -1,0 +1,11 @@
+name: test-workflow
+
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest # Github hosted runner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - run: echo "$(cat test-file.txt)"
